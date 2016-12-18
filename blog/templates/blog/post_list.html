@@ -1,27 +1,13 @@
-<html>
-    <head>
-        <title>blog adama</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">ucze sie</a></h1>
-        </div>
+{% extends 'blog/base.html' %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">jezyka python</a></h2>
-            <p>ucze sie mało popularnego jezyka pyton, malo zlecen ale w c++ nie dam rady zaprogramowac strony, poprostu za słabo znam c++</p>
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">nie wie, po co mi to </a></h2>
-            <p>ale jest fajnie. znaczy ze nie jest takie skomplikowane jak jawa a na linuksie chyba jest latwiej teraz nauczyc sie pytona niz napisac strone w c++</p>
-        </div>
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">link do mojego bloga</a></h2>
-            <p><a href="http://www.notepadpl.blogspot.com">link</a></p>
-        </div>
-    </body>
-</html>
+    {% endfor %}
+{% endblock content %}
