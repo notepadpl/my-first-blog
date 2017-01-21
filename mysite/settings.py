@@ -25,7 +25,9 @@ SECRET_KEY = '3a-3^1_ng$dhnxz-xvi)s_8ze%0jow#6o4@8ffy%^qh1@jz6m5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
+
+STATICSITEMAPS_ROOT_SITEMAP = 'mysite.sitemaps.sitemaps'
 
 
 # Application definition
@@ -38,6 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'django.contrib.sitemaps',
+    'mysite',
+    
 )
 
 MIDDLEWARE_CLASSES = (

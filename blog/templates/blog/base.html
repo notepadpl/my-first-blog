@@ -23,7 +23,7 @@
                 <div class="col-md-8">	
     {% for post in posts %}
 			<p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
-			<p><a href="/">sitemap.xml</a></p>
+			
     {% endfor %}
                 </div>
             </div>
