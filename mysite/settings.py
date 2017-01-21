@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3a-3^1_ng$dhnxz-xvi)s_8ze%0jow#6o4@8ffy%^qh1@jz6m5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 STATICSITEMAPS_ROOT_SITEMAP = 'mysite.sitemaps.sitemaps'
 
